@@ -22,8 +22,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
-    <DocumentationFile>
-    </DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -33,9 +31,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
-  </PropertyGroup>
-  <PropertyGroup>
-    <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
     <DelaySign>true</DelaySign>
@@ -53,6 +48,9 @@
     </Reference>
     <Reference Include="Wolfje.Plugins.SEconomy">
       <HintPath>..\References\Wolfje.Plugins.SEconomy.dll</HintPath>
+    </Reference>
+    <Reference Include="OTAPI">
+      <HintPath>..\References\OTAPI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

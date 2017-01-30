@@ -15,13 +15,6 @@ namespace TSReward
 
 	public class RestHelper
 	{
-		private TSReward _main;
-
-		public RestHelper(TSReward main)
-		{
-			_main = main;
-		}
-
 		public async Task<Response> CheckVoteAsync(string key, string username)
 		{
 			try

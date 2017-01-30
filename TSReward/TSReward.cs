@@ -9,10 +9,10 @@ using Wolfje.Plugins.SEconomy.Journal;
 
 namespace TSReward
 {
-	[ApiVersion(1, 23)]
+	[ApiVersion(2, 0)]
 	public class TSReward : TerrariaPlugin
 	{
-		public override string Author => "Ancientgods, Enerdy";
+		public override string Author => "Ancientgods & Enerdy";
 
 		public Config Config { get; private set; }
 
@@ -63,7 +63,7 @@ namespace TSReward
 				HelpText = "Claim rewards for voting for this server at Terraria-Servers.com."
 			});
 
-			Rests = new RestHelper(this);
+			Rests = new RestHelper();
 
 			Timer = new Timer(Config.IntervalInSeconds * 1000);
 			Timer.Elapsed += (object sender, ElapsedEventArgs args) =>
