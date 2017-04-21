@@ -39,18 +39,18 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\References\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="OTAPI">
+      <HintPath>..\..\Server\OTAPI.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="TerrariaServer">
-      <HintPath>..\References\TerrariaServer.exe</HintPath>
+      <HintPath>..\..\Server\TerrariaServer.exe</HintPath>
     </Reference>
     <Reference Include="TShockAPI">
-      <HintPath>..\References\TShockAPI.dll</HintPath>
+      <HintPath>..\..\Server\ServerPlugins\TShockAPI.dll</HintPath>
     </Reference>
     <Reference Include="Wolfje.Plugins.SEconomy">
-      <HintPath>..\References\Wolfje.Plugins.SEconomy.dll</HintPath>
-    </Reference>
-    <Reference Include="OTAPI">
-      <HintPath>..\References\OTAPI.dll</HintPath>
+      <HintPath>..\..\SEconomyDist\Wolfje.Plugins.SEconomy.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

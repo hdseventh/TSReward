@@ -9,7 +9,7 @@ using Wolfje.Plugins.SEconomy.Journal;
 
 namespace TSReward
 {
-	[ApiVersion(2, 0)]
+	[ApiVersion(2, 1)]
 	public class TSReward : TerrariaPlugin
 	{
 		public override string Author => "Ancientgods & Enerdy";
