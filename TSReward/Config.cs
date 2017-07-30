@@ -16,8 +16,6 @@ namespace TSReward
 			[TShock.Config.ServerPort] = "key1"
 		};
 
-		public int SEconomyReward { get; set; } = 1000;
-
 		public bool AnnounceOnReceive { get; set; } = true;
 
 		public string[] Commands { get; set; } = new[]
