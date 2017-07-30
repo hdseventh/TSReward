@@ -4,8 +4,6 @@ using System.Timers;
 using Terraria;
 using TerrariaApi.Server;
 using TShockAPI;
-using Wolfje.Plugins.SEconomy;
-using Wolfje.Plugins.SEconomy.Journal;
 
 namespace TSReward
 {
@@ -133,19 +131,6 @@ namespace TSReward
 
 					if (await Rests.SetAsClaimedAsync(Config.ServerKey[port], player.User.Name))
 					{
-						if (SEconomyPlugin.Instance != null)
-						{
-							var playerBankAccount = SEconomyPlugin.Instance.GetBankAccount(player);
-							await SEconomyPlugin.Instance.WorldAccount.TransferToAsync(
-								playerBankAccount,
-								Config.SEconomyReward,
-								Config.AnnounceOnReceive
-									? BankAccountTransferOptions.AnnounceToReceiver
-									: BankAccountTransferOptions.SuppressDefaultAnnounceMessages,
-								"voting on terraria-servers.com",
-								"Voted on terraria-servers.com");
-						}
-
 						for (int i = 0; i < Config.Commands.Length; i++)
 						{
 							Commands.HandleCommand(TSPlayer.Server, Config.Commands[i].Replace("%playername%", player.Name));
