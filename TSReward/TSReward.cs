@@ -122,7 +122,7 @@ namespace TSReward
 
 		async Task handleRewards(TSPlayer player, int port)
 		{
-			switch (await Rests.CheckVoteAsync(Config.ServerKey[port], player.User.Name))
+			switch (await Rests.CheckVoteAsync(Config.ServerKey[port], player.Account.Name))
 			{
 				case Response.NotFound:
 					Config.VoteNotFoundMessage.Send(player);
@@ -131,7 +131,7 @@ namespace TSReward
 				case Response.VotedNotClaimed:
 					Config.OnRewardClaimMessage.Send(player);
 
-					if (await Rests.SetAsClaimedAsync(Config.ServerKey[port], player.User.Name))
+					if (await Rests.SetAsClaimedAsync(Config.ServerKey[port], player.Account.Name))
 					{
 						if (SEconomyPlugin.Instance != null)
 						{
@@ -150,6 +150,12 @@ namespace TSReward
 						{
 							Commands.HandleCommand(TSPlayer.Server, Config.Commands[i].Replace("%playername%", player.Name));
 						}
+
+						//put your additional rewards here ex.
+						//player.GiveItem(1,10);
+						//or
+						//player.SetBuff(1, 180000, true);
+
 					}
 					return;
 
